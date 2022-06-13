@@ -1,0 +1,49 @@
+#!/data/data/com.termux/files/home/pil21/pil
+# 10jan22abu
+# Pseudo Terminal (PilBox)
+
+(load "@lib/term.l")
+
+(setq *Port 8081)  # Sync with ~/Port in PilBox
+
+(unless (setq *Sock (connect (or (opt) "localhost") (inc *Port)))
+   (bye) )
+(out *Sock (in "~/.pty" (echo)))  # Sync with ~/.pty in PilBox
+
+(push '*Bye '(prinl))
+
+(de sendCmd @
+   (out *Sock (space) (pass println))
+   (in *Sock (till "-") (till "\n")) )
+
+(task (port (+ *Port 2))
+   (let? S (accept @)
+      (catch '(NIL)
+         (in S
+            (when (= (rd) (in "~/.pty" (line T)))
+               (casq (rd)
+                  (+ (in (rd) (out S (echo))))
+                  (- (out (rd) (echo))) ) ) )
+         (off *Msg) )
+      (close S)
+      (and *Msg (prinl @)) ) )
+
+(when (getTerm)
+   (sendCmd
+      (cons 'setTerm (sys "TERM") @)
+      '(off *Err) )
+   (de *Winch
+      (sendCmd (cons 'setTerm (sys "TERM") (getTerm))) ) )
+
+(raw T)
+(call "stty" "intr" NIL)
+
+(task *Sock
+   (in @
+      (ifn (rd 1)
+         (bye)
+         (wr @)
+         (flush) ) ) )
+
+(loop
+   (and (key) (out *Sock (prin @))) )

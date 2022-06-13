@@ -1,0 +1,1422 @@
+10jun22
+   Don't lock remote symbols
+      lib/vip.l
+
+09jun22
+   Check empty name in '+SymField'
+      lib/form.l
+
+07jun22
+   Refined system clipboard copy
+      lib/vip.l
+
+06jun22
+   Missing "void *" in '*C-Defs'
+      src/lib/llvm.l
+
+03jun22
+   Disable form action for stale locks
+      lib/form.l
+
+31may22
+   Remove 'visibilitychange' event handling
+      lib/xhtml.l
+
+30may22
+   'h' function
+      lib/debug.l
+      doc/refH.html
+
+29may22
+   String arguments do no longer cause strdup(3) calls
+      doc/native.html
+
+26may22
+   Add 'binutils'
+      INSTALL
+   Use 'output' instead of 'pipe'
+      lib/misc.l
+   Replace control characters with backslash sequences
+      lib/misc.l
+      lib/db.l
+      lib/vip.l
+      lib/term.l
+      lib/http.l
+      lib/xhtml.l
+      lib/form.l
+      lib/canvas.l
+      lib/xm.l
+      lib/tinymce.l
+      test/src/io.l
+      test/src/sym.l
+      test/lib/misc.l
+      doc/tut.html
+      doc/refA.html
+      doc/refP.html
+      doc/form/refS.html
+      doc/app.html
+      misc/bigtest
+
+25may22
+   Bug in 'untrace'
+      lib/debug.l
+   Multi-line data in 'serverSend'
+      lib/xhtml.l
+   'input' and 'output' functions
+      src/glob.l
+      src/dec.l
+      src/main.l
+      src/gc.l
+      src/io.l
+      test/src/io.l
+      doc/ref.html
+      doc/refI.html
+      doc/refO.html
+
+18may22
+   Fix 'raw' example
+      doc/refR.html
+   Clear stdin 'tty' flag in 'pipe' child
+      src/io.l
+
+15may22
+   Replace "%" also if in command window
+      lib/vip.l
+
+13may22
+   Optional "dup" file descriptor argument to 'fd'
+      src/io.l
+      doc/refF.html
+   Use 'in' instead of 'pipe' for "ccrypt" call
+      lib/vip.l
+
+12may22
+   Fix 'dbs' example
+      doc/refD.html
+
+11may22
+   Use '*Uri' instead of '*Url' in 'post'
+      lib/form.l
+
+10may22
+   Support also PUT, PATCH and DELETE
+      src/httpGate.c
+
+06may22
+   Global '*Uri'
+      lib/http.l
+   Clean up '*Err'
+      lib/app.l
+
+05may22
+   Call 'flush' in 'tty'
+      src/dec.l
+      src/main.l
+      src/ht.l
+
+03may22
+   Use 'tty' in 'msg'
+      lib.l
+   Re-introduce 'visibilitychange' event handling
+      lib/xhtml.l
+
+01may22
+   'fun' function
+      src/glob.l
+      src/apply.l
+      test/src/apply.l
+      doc/ref.html
+      doc/refF.html
+
+30apr22
+   Add "epub" mime type
+      lib/http.l
+
+26apr22
+   Outdated example for 'lisp'
+      doc/refL.html
+
+24apr22
+   Define PATH_MAX
+      src/sysdefs.c
+      lib/vip.l
+
+22apr22
+   Preserve 'errno' across readline(3) calls
+      src/dec.l
+      src/io.l
+      src/lib.c
+   Word search without 'match' support
+      lib/vip.l
+
+20apr22
+   'noLint' declarations
+      lib/xhtml.l
+      lib/svg.l
+      lib/canvas.l
+
+17apr22
+   Don't maintain ErrFrames and CtlFrames in coroutines
+   Fix file descriptor leak when stopping coroutines
+      src/dec.l
+      src/flow.l
+
+11apr22
+   'trail' check not needed
+      lib/app.l
+
+09apr22
+   Collect also C-tags into @lib/map
+      src/lib/llvm.l
+      src/main.l
+      src/pico.h
+      src/lib.c
+
+08apr22
+   Add "-o lib.bc"
+   Add "clean2" target
+      src/Makefile
+
+06apr22
+   Optional rounding in 'lat', 'lon' and 'fmt'
+      lib/gis.l
+
+05apr22
+   Check zero charCode in hint key events
+      lib/form.js
+
+####### 22.3 #######
+16mar22
+   Pre-set 'home' property in 'form'
+   Conditionally unlock and enable in 'panel'
+      lib/form.l
+
+14mar22
+   Bug in 'ps'
+      lib/svg.l
+   Local and private declarations
+      lib/xm.l
+   Escape also backslashes in <poi>
+      lib/gis.l
+
+13mar22
+   Escape single quotes in <poi> text argument
+      lib/gis.l
+   Use 'get' instead of (cdr (asoq ..))
+      lib/xm.l
+
+08mar22
+   Revisit tcsetpgrp() calls
+      src/dec.l
+      src/flow.l
+      lib/debug.l
+
+04mar22
+   Plain searches without 'match' overhead
+      lib/vip.l
+
+28feb22
+   Issues with tcsetpgrp() calls
+      src/io.l
+      src/flow.l
+
+26feb22
+   Transient and private namespaces in catch and coroutine frames
+      src/glob.l
+      src/dec.l
+      src/main.l
+      src/gc.l
+      src/flow.l
+
+24feb22
+   Refactor 'repl' loops
+      src/io.l
+
+23feb22
+   Don't exit top-level REPL
+      src/main.l
+      src/io.l
+
+22feb22
+   Print error location in 'repl'
+      lib/form.l
+   Print error location in 'evCmd'
+      lib/vip.l
+
+21feb22
+   'height' function
+   Handle '0' and 'T' directly in 'ps'
+      lib/svg.l
+
+19feb22
+   Handle NILs in (has> . +List)
+      lib/db.l
+   Increase stack size
+      bin/vip
+
+13feb22
+   'move!>' method for '+Entity'
+      lib/too.l
+
+11feb22
+   Comment for 'fill'
+      src/subr.l
+
+05feb22
+   Remove 'dbs+'
+      lib/db.l
+      doc/ref.html
+      doc/refD.html
+   Pass '*Uuid' and arguments to RPC calls
+      lib/android.l
+
+02feb22
+   Revisit (rel> . +Dep)
+      lib/db.l
+
+01feb22
+   Add 'nth' to "see also" of 'get'
+      doc/refG.html
+
+30jan22
+   Additional arguments to 'fish'
+      src/apply.l
+      doc/refF.html
+      test/src/apply.l
+      lib/too.l
+
+28jan22
+   Optional third argument to 'fill'
+      src/subr.l
+      doc/refF.html
+      test/src/subr.l
+
+27jan22
+   'wrap' also converts string to list of strings
+      lib/misc.l
+      doc/refW.html
+      test/lib/misc.l
+   'badDep' function
+      lib/too.l
+
+26jan22
+   Bug in (rel> . +Dep)
+      lib/db.l
+
+21jan22
+   Optional database file for 'forall'
+      lib/db.l
+      doc/refF.html
+   Inherit tags from superclasses
+      lib/vip.l
+   Refactor screen handling
+      lib/term.l
+      lib/vip.l
+
+20jan22
+   'seq' instead of 'dbMap' in 'dangling'
+   'displaced' function
+      lib/too.l
+
+18jan22
+   Stack check in 'apply'
+      src/apply.l
+   Discrete-Event Simulation: 'des', 'pause', 'event' and 'wake' functions
+      lib/simul.l
+
+15jan22
+   '-debug' and '-trace' functions
+      lib/debug.l
+      doc/ref.html
+      doc/refD.html
+      doc/refT.html
+
+13jan22
+   Change "EMail" to "E-Mail"
+      doc/form/refM.html
+
+11jan22
+   Central Kurdish localization (Hunar Omar)
+      loc/CKB.l
+      loc/ckb
+
+10jan22
+   Variable '*Port'
+      bin/pty
+
+08jan22
+   Handle SIGWINCH
+      bin/pty
+   Reset readline in 'setTerm'
+      lib/term.l
+   Display namespace in 'repl'
+      lib/form.l
+
+07jan22
+   'refObj' searches also values
+      lib/too.l
+
+06jan22
+   Don't reset 'Busy' in ping()
+      lib/form.js
+
+04jan22
+   Bug in 'name' for external symbols
+      src/sym.l
+
+####### 21.12 #######
+03jan22
+   Bugs in (del> . +Entity) and (has> . +List)
+      lib/db.l
+      test/lib/db.l
+   'assoc', 'rassoc', 'asoq' and 'rasoq' accept circular lists
+      src/subr.l
+      test/src/subr.l
+
+30dec21
+   Enable file transfers (via 'pbPut' and 'pbGet' in PilBox)
+      bin/pty
+
+29dec21
+   Fix touch scrolling in chart tables
+      lib/form.l
+      lib/form.js
+      lib/xhtml/table
+
+27dec21
+   '-symbols' function
+      lib.l
+      doc/ref.html
+      doc/refS.html
+
+22dec21
+   OpenBSD patch (Frithjof Schulze)
+      src/httpGate.c
+
+20dec21
+   Don't put single "." into readline history
+
+14dec21
+   Avoid 'resolveActivity' in 'startActivityForResult'
+      lib/android.l
+
+13dec21
+   Splice also atomic results in "~" read macros and 'fill'
+      src/io.l
+      src/subr.l
+      test/src/subr.l
+      doc/refF.html
+
+12dec21
+   Bug in 'format' (llvm~fmtNum)
+      src/big.l
+   Overflow float/double to bignum
+      src/dec.l
+      src/main.l
+      src/pico.h
+      src/lib.c
+
+10dec21
+   'native' and 'struct' not limited to C functions
+      doc/refN.html
+      doc/refS.html
+   'Str' not used in 'getWord'
+      lib/vip.l
+
+08dec21
+   Add 'adr' to "see also" of 'native'
+      doc/refN.html
+
+05dec21
+   Global '*Keys'
+   ":map" command
+      lib/vip.l
+
+04dec21
+   Lock, sync and commit external symbols
+      lib/vip.l
+
+30nov21
+   'R' may be modified in 'evCmd'
+      lib/vip.l
+
+29nov21
+   Extend 'command' with '*CmdMap'
+   Continue direct editing only with "K" ("^]" always goes to source)
+      lib/vip.l
+
+28nov21
+   Remove '*Complete' filter
+      lib/vip.l
+
+26nov21
+   'all*' function
+      lib.l
+      doc/refA.html
+   Refactor TAB-completion
+      lib/vip.l
+
+25nov21
+   Search namespaces in TAB-completion
+      lib/vip.l
+
+22nov21
+   Minor cosmetics
+      lib.css
+      lib/canvas.js
+      lib/plio.js
+      lib/gis.js
+      loc/ar
+      loc/ch
+      loc/cn
+      loc/de
+      loc/hr
+      loc/it
+      loc/ja
+      loc/tr
+
+21nov21
+   Simplify style manipulations
+      lib/form.l
+      lib/form.js
+
+18nov21
+   Bug in 'bagBag'
+      lib/form.l
+
+17nov21
+   Minor cosmetics
+      lib/form.l
+   Inherit 'Dbf' in 'forall' from superclasses
+      lib/db.l
+
+16nov21
+   Re-introduce the '====' function
+      src/glob.l
+      src/sym.l
+      test/src/sym.l
+      doc/ref_.html
+      doc/diff
+   and use it in 'locale'
+      lib/misc.l
+   Preserve transients in comma read macro
+      src/io.l
+
+15nov21
+   Use 'fName' in 'vf'
+      lib/vip.l
+
+12nov21
+   '+ObjVar' prefix class
+      lib/form.l
+
+11nov21
+   Missing semicolon (Mia)
+      lib/form.js
+
+09nov21
+   Increase escape delay from 80 to 120
+      lib/vip.l
+
+31oct21
+   Mention Ctrl-D to terminate 'bt', 'query' and '?'
+      doc/ref.html
+      doc/refB.html
+      doc/refM.html
+      doc/refQ.html
+      doc/ref_.html
+
+30oct21
+   Generalize cut in 'prove'
+      src/subr.l
+
+29oct21
+   rl_initialize() not necessary
+      src/lib.c
+
+28oct21
+   Display namespace in 'status'
+      lib/vip.l
+   Minor optimization in '*Prompt'
+      lib/debug.l
+
+27oct21
+   'vf' (vi/find) function
+      lib/vip.l
+   Default '*Tab' to 1
+      lib/xhtml.l
+
+25oct21
+   '*KeyMap', '*KeyMap-g' and '*KeyMap-q' globals (Erik Gustafson)
+   More transients
+      lib/vip.l
+
+18oct21
+   Refactor (gui> . +User)
+      lib/adm.l
+      lib/user.l
+
+15oct21
+   Mention Ctrl-D to terminate 'more'
+      doc/refM.html
+
+11oct21
+   "CSV" -> "Export CSV" in 'csv'
+      lib/xhtml.l
+
+09oct21
+   'pico~cells' function
+      lib/vip/draw.l
+   Minor cosmetics
+      lib/vip.l
+   Fix 'arrow' for small distances
+      lib/vip/draw.l
+
+02oct21
+   Remove '+JsField'
+      lib/form.l
+      doc/app.html
+      doc/form/refJ.html
+   Import 'permute' from 'pico' namespace
+      lib/simul.l
+
+29sep21
+   '+hintObj' prefix class for '+Obj' and '+ObjVal'
+      lib/form.l
+
+25sep21
+   'rand' argument checks
+      src/big.l
+      doc/refR.html
+
+24sep21
+   Ignore SIGINT in 'ctty' parent process
+      src/main.l
+   Forward "^D"
+      bin/pty
+
+23sep21
+   Clear '*Err'
+      bin/pty
+
+20sep21
+   Initial '$StkBrk' and '$StkLimit'
+      src/glob.l
+      src/main.l
+
+19sep21
+   ulimStk() system call
+      src/dec.l
+      src/pico.h
+      src/lib.c
+
+17sep21
+   Clear 'history' after argument evaluation
+      src/main.l
+
+16sep21
+   Insert "^M" before "^J" in 'mail' body
+      lib/misc.l
+   'refObj' function
+      lib/too.l
+
+13sep21
+   Insert "^M" before "^J" in 'mail' body
+      lib/misc.l
+   'prBase64' optional "^M" argument
+      lib/misc.l
+      doc/refP.html
+   Explanations for reference syntax
+      doc/ref.html
+
+10sep21
+   "gg" uses *Count
+      lib/vip.l
+
+03sep21
+   'mis>' method for '+Swap'
+      lib/db.l
+
+01sep21
+   select() system calls are now poll()
+      doc/refK.html
+      doc/refL.html
+      doc/refR.html
+      doc/refS.html
+      doc/refW.html
+
+30aug21
+   Typo
+      doc/refR.html
+
+28aug21
+   Add note about 'native'
+      doc/faq.html
+   'rid' function
+      test/src/sym.l
+
+27aug21
+   'rid' function
+      src/glob.l
+      src/sym.l
+      test/src/sym.l
+      doc/ref.html
+      doc/refC.html
+      doc/refD.html
+      doc/refF.html
+      doc/refQ.html
+      doc/refR.html
+
+26aug21
+   Bug in 'place'
+      src/subr.l
+      test/src/subr.l
+
+25aug21
+   Division by zero did not throw an error
+      src/big.l
+   Private declarations
+      lib/xhtml.l
+
+22aug21
+   Default alert text color black
+      lib.css
+
+20aug21
+   Wrong 'tty' checks for stdin/stdout
+      src/main.l
+      src/flow.l
+
+19aug21
+   LLC and LINK variables
+      src/Makefile
+
+18aug21
+   Strip binaries
+      src/Makefile
+   'rasoq' function
+      src/glob.l
+      src/subr.l
+      test/src/subr.l
+      doc/ref.html
+      doc/refA.html
+      doc/refR.html
+
+16aug21
+   Add 'packJson'
+      lib/json.l
+
+14aug21
+   Sort TAB-completion
+      lib/vip.l
+   Host option
+      bin/pty
+
+13aug21
+   Check (sys "SHELL") for default shell
+      lib/vip.l
+
+12aug21
+   Some Pilog variables private again
+      lib/pilog.l
+
+11aug21
+   Default shell "bash" -> "sh"
+      lib/vip.l
+   Shell prefix "$ " -> "!" in 'repl'
+      lib/form.l
+
+09aug21
+   'go', 'up', 'down', 'left' and 'right functions
+   'block' function
+      lib/vip/draw.l
+   Preset terminal attributes in setRaw()
+      src/lib.c
+
+08aug21
+   Add files
+      lib/term.l
+      bin/pty
+
+07aug21
+   Clean up terminal handling
+      lib/vip.l
+
+06aug21
+   Add TIOCSWINSZ
+      src/sysdefs.c
+   Set standard I/O to a PTY with (ctty)
+      src/Makefile
+      src/dec.l
+      src/main.l
+      doc/refC.html
+
+03aug21
+   'tty' flag also in 'inFile'
+      src/dec.l
+      src/main.l
+      src/io.l
+      src/flow.l
+
+27jul21
+   Direct 'run' in auto-load with "# VIP (...)"
+      lib/vip.l
+
+26jul21
+   Bug in reading non-ASCII characters in internal symbols
+      src/io.l
+
+25jul21
+   'cnt' argument to 'unify'
+      src/subr.l
+      lib/pilog.l
+      doc/refU.html
+
+24jul21
+   Signal handler in 'prove'
+      src/subr.l
+
+23jul21
+   Pilog variables not private
+      lib/pilog.l
+   Revisit Pilog variables in Lisp expressions
+      src/subr.l
+
+22jul21
+   Revisit private symbols in properties
+      lib/vip.l
+
+21jul21
+   Global '*Rule' cleared in 'repl'
+      src/glob.l
+      src/io.l
+      doc/ref.html
+      doc/refB.html
+      doc/refC.html
+      doc/refR.html
+   Maintain source properties also in 'clause'
+      lib/pilog.l
+   Bind Pilog variables in Lisp expressions
+      src/subr.l
+      lib/pilog.l
+      test/src/subr.l
+      doc/ref.html
+      doc/refM.html
+      doc/refR.html
+      doc/refT.html
+   Intern private symbols also in properties
+      lib/vip.l
+   Bug in 'putSrc' for first property
+      src/flow.l
+
+18jul21
+   Minor cosmetics
+      src/subr.l
+
+16jul21
+   em120 and em150 styles
+      lib.css
+
+13jul21
+   'buf' function
+      doc/ref.html
+      doc/refB.html
+
+10jul21
+   Revisit (put> . +Swap)
+      lib/db.l
+      test/lib/db.l
+
+05jul21
+   Fix 'clone>' for '+Swap' in '+Bag'
+      lib/db.l
+
+04jul21
+   E/R unit tests
+      lib/test.l
+      test/src/sym.l
+      test/src/db.l
+      test/lib/db.l
+   Clean up 'has>' methods
+      lib/db.l
+      lib/tinymce.l
+   Revisit '+Bag' and '+Swap'
+      lib/db.l
+
+03jul21
+   Support methods as ":ta msg> +Cls"
+      lib/vip.l
+   Make 'bagBag' non-destructive
+      lib/form.l
+
+02jul21
+   'forall' function
+      doc/ref.html
+   Add file
+      doc/rc.sample
+
+01jul21
+   'forall' function
+      lib/db.l
+      doc/refF.html
+
+####### 21.6 #######
+30jun21
+   '+Swp' prefix class
+      lib/form.l
+   Lazy external symbol creation in '+Swap'
+      lib/db.l
+   'has>' check in (rel> . +Joint)
+      lib/db.l
+   Keep application namespaces for background tasks in '*Ns'
+      lib/vip.l
+
+29jun21
+   Keep application namespaces for background tasks in '*Ns'
+      lib/vip.l
+      bin/vip
+
+24jun21
+   Minor addition
+      doc/microTemplates
+
+23jun21
+   Micro-templates for '<table>' and '<grid>'
+      doc/microTemplates
+
+22jun21
+   Micro-templates for '<table>' and '<grid>'
+      lib/xhtml.l
+      lib/xhtml/table
+      lib/xhtml/grid
+   Add <tr> and </tr>
+      lib/xhtml/tab
+
+21jun21
+   Minor fix in reference for 'all'
+      doc/refA.html
+
+20jun21
+   Micro-templates 2.0
+      lib/xhtml.l
+      lib/xhtml/
+      doc/microTemplates
+
+19jun21
+   Wrong 'Attr' output in 'html'
+      lib/xhtml.l
+   'pack' not needed
+      lib/vip.l
+   General argument to 'any'
+      src/io.l
+      doc/refA.html
+
+18jun21
+   Also 'flip'ped sort in 'sortButton'
+      lib/form.l
+
+17jun21
+   'sortButton' function
+      lib/form.l
+
+16jun21
+   Vip running in coroutine
+   Suspend with "qz", resume with (v)
+      lib/vip.l
+      doc/refV.html
+
+15jun21
+   Fix terminal after 'pipe', 'in' and 'out'
+      src/io.l
+
+14jun21
+   Minor fix indentation
+      src/flow.l
+   Restore private declarations
+      lib/xhtml.l
+   Missing '+Remote' methods
+      lib/db.l
+
+13jun21
+   Add '\e' to escape markups
+      src/io.l
+      doc/ref.html
+
+11jun21
+   Optional 'put' and 'get' function arguments for '+Joint'
+      lib/db.l
+
+09jun21
+   Revert confirm row deletion (01may21)
+      lib/form.l
+
+04jun21
+   'ctty' NIL argument is obsolete
+      src/main.l
+      doc/refC.html
+   Minor renaming
+      src/flow.l
+
+02jun21
+   Push tag stack in "gf" command
+      lib/vip.l
+   Add A3 page sizes
+      lib/svg.l
+   Intern some globals for reload
+      lib/form.l
+
+01jun21
+   'class' clears old method and var definitions
+   'var' uses 'def' instead of 'put'
+      lib.l
+      test/lib.l
+
+29may21
+   Set cooked terminal mode in 'repl'
+      src/io.l
+
+27may21
+   Revisit TAB-completion
+      lib/vip.l
+   Use 'val' for '+Swap' relations in 'set>'
+      lib/db.l
+
+25may21
+   Revisit TAB-completion from 'history'
+      lib/vip.l
+   Unary '+' is obsolete in '*Run' setup
+      lib.l
+
+24may21
+   Nesting bug in 'cells'
+      lib/vip/draw.l
+
+23may21
+   Maintain 'symbols' per buffer
+      lib/vip.l
+
+21may21
+   TAB-complete from 'history' on ": "
+   ":v" command
+      lib/vip.l
+
+20may21
+   setCooked() only if necessary
+      src/lib.c
+
+19may21
+   Add file
+      lib/clang.l
+
+18may21
+   Fix 'struct'  example
+      doc/refS.html
+
+14may21
+   <grid> vertical-aligns to top
+      lib.css
+   Optional submenu CSS class index
+      lib/xhtml.l
+      lib/xhtml/menu
+
+12may21
+   Add file
+      doc/microTemplates
+   Needs '*XhtmlField' in '<field>'
+      lib/xhtml.l
+
+11may21
+   Don't set IPV6_V6ONLY for OpenBSD
+      lib/net.l
+
+10may21
+   64-bit check not needed
+      lib/adm.l
+
+06may21
+   Missing '+Remote' methods
+      lib/db.l
+   Missing 'mail' handshake (Mike Pechkin)
+      lib/misc.l
+
+05may21
+   Fix catch/throw between coroutines
+      src/dec.l
+      src/main.l
+      src/flow.l
+      doc/structures
+      doc/ref.html
+
+04may21
+   I/O save/restore bug in 'co' / 'yield'
+      src/main.l
+      src/flow.l
+   Minor cosmetics (collapse two 'let's)
+      src/flow.l
+   Fix docs and comments about coroutine tags
+      src/main.l
+      src/flow.l
+      doc/ref.html
+      doc/refC.html
+      doc/refS.html
+      doc/refY.html
+
+03may21
+   (co) returns tag of current coroutine
+      src/flow.l
+      doc/refC.html
+   'shift' function
+      src/glob.l
+      src/sym.l
+      doc/ref.html
+      doc/refS.html
+      doc/refP.html
+      test/src/sym.l
+
+01may21
+   Confirm row deletion also if repeated
+      lib/form.l
+
+30apr21
+   Add file
+      doc/app.html
+
+29apr21
+   Call 'loadCoEnv' in 'unwind'
+      src/main.l
+      src/flow.l
+   Remove coroutines from catch/throw environment
+      src/glob.l
+
+22apr21
+   Show thousands-separator in total counts in search dialogs
+      lib/form.l
+
+21apr21
+   File in first column of directory listings
+      lib/vip.l
+
+20apr21
+   Bug in 'till' reading UTF-8
+      src/io.l
+
+19apr21
+   Align SUBRs to 8 bytes
+      src/lib/llvm.l
+
+18apr21
+   's-expr' function, evaluate with "^E"
+      lib/vip.l
+
+17apr21
+   'stack' return value fix
+      src/main.l
+      doc/refS.html
+   Infinite timeout for values greater than 24 days in '*Run', 'wait' and 'key'
+   on non-Linux systems (using ppoll(2) on Linux)
+      src/lib.c
+   'stack' continued
+      src/main.l
+
+16apr21
+   Independent size of main stack segment
+      src/glob.l
+      src/main.l
+      src/flow.l
+      doc/refS.html
+   'stack' returns unused spaces
+      src/main.l
+      doc/refS.html
+   'llvm~cons2' function
+      src/dec.l
+      src/gc.l
+   Coroutine structure 'prv'
+      doc/structures
+   Optional alignment for 'memcpy' and 'memset'
+      src/lib/llvm.l
+      src/main.l
+      src/db.l
+      src/flow.l
+
+15apr21
+   Infinite timeout for values greater than 24 days in '*Run', 'wait' and 'key'
+   (only on systems with sizeof(int) == 4)
+      src/lib.c
+
+14apr21
+   Skip remote replication if 'key' is empty
+      src/ssl.c
+
+13apr21
+   Bug in '<table>': Header text not evaluated
+      lib/xhtml.l
+   ContextCompat 'permit' function
+      lib/android.l
+   'Str' in 'repl' private
+      lib/form.l
+
+10apr21
+   Minor fix indentation
+      lib/vip.l
+
+09apr21
+   Extensions to NIL punning
+      doc/ref.html
+
+08apr21
+   Support '-fun' command line arguments
+      bin/vip
+
+07apr21
+   'enum?' function
+      src/glob.l
+      src/sym.l
+      doc/ref.html
+      doc/refE.html
+      doc/refL.html
+      test/src/sym.l
+
+04apr21
+   Wrong external declaration
+      src/ht.l
+
+03apr21
+   Bug in 'stem' (for -O2 or -O3)
+      src/subr.l
+
+01apr21
+   'enum' returns cell instead of value
+      src/sym.l
+      doc/refE.html
+      test/src/sym.l
+      doc/faq.html
+   Bug in '*Term' signal handling
+      src/main.l
+
+31mar21
+   '+Remote' entity class
+      lib/db.l
+      lib/too.l
+
+30mar21
+   Exit '*', '/*', '/' and '%' upon zero
+      src/big.l
+
+29mar21
+   Note about the default browser for 'doc' calls
+      man/man1/picolisp.1
+      doc/man.html
+
+26mar21
+   'enum' with single argument returns association list
+      src/sym.l
+      doc/refE.html
+      test/src/sym.l
+
+25mar21
+   Return NIL from 'enum' if key <= 0
+      src/sym.l
+   Unit tests for 'enum'
+      test/src/sym.l
+   '*Term' signal handling (Constantine Bitensky)
+      src/glob.l
+      src/main.l
+      doc/ref.html
+      doc/refT.html
+      doc/refA.html
+      doc/refH.html
+      doc/refS.html
+      doc/refW.html
+
+24mar21
+   'enum' function
+      src/sym.l
+
+23mar21
+   'enum' function
+      src/glob.l
+      src/sym.l
+      doc/ref.html
+      doc/refE.html
+      doc/refH.html
+      doc/refI.html
+   'rev' function bit count argument
+      src/big.l
+      doc/refR.html
+
+21mar21
+   'rev' function
+      src/glob.l
+      src/big.l
+      doc/ref.html
+      doc/refR.html
+      doc/refH.html
+      doc/refI.html
+      doc/ref_.html
+
+17mar21
+   Still missing
+      @lib/xm.l
+   Ukrainian and russian localization (Constantine Bitensky)
+      loc/RU.l
+      loc/uk
+      loc/ru
+
+10mar21
+   Renamed "UK.l" to "UA.l", restored "UK.l" and renamed to "GB.l"
+   Renamed "gr" to "el" and "jp" to "ja"
+      loc/UA.l
+      loc/GB.l
+      loc/uk
+   Symbolic links
+      UK.l -> GB.l
+      gr -> el
+      jp -> ja
+
+08mar21
+   Missing file
+      @lib/xm.l
+
+07mar21
+   Ukrainian localization (Constantine Bitensky)
+      loc/UK.l
+      loc/uk
+
+05mar21
+   Subdirectory recursion buffer-local
+   Recurse when no trailing "/"
+      lib/vip.l
+
+02mar21
+   '*Bye' cleared in children
+      src/io.l
+      lib.l
+      lib/adm.l
+      lib/app.l
+      doc/diff
+
+28feb21
+   Missing check for NIL
+      lib/vip.l
+
+26feb21
+   Remove Access-Control-Allow-Origin header
+      lib/http.l
+
+20feb21
+   Prefix "@" with "./" in directory listings
+   Recurse into subdirectories with ":E"
+      lib/vip.l
+
+16feb21
+   Case insensitive search with "~" prefix
+   Increase escape delay to 80 ms
+      lib/vip.l
+
+12feb21
+   Rename file to "area", add "field"
+      lib/xhtml.l
+      lib/xhtml/area
+      lib/xhtml/field
+
+11feb21
+   Elaborate '<area>'
+      lib/xhtml.l
+      lib/xhtml/textarea
+
+09feb21
+   Ignore SIGHUP for non-config calls
+      src/httpGate.c
+
+08feb21
+   Start task in first 'heartbeat' call
+      lib/heartbeat.l
+   Touch events not needed
+      lib/xhtml/tab
+
+07feb21
+   Variable titles in menu
+   Layout template line format
+      lib/xhtml.l
+      lib/xhtml/menu
+      lib/xhtml/layout
+
+05feb21
+   'plio' must preserve $Ptr and $End
+      src/io.l
+   Load @lib/too.l always in 'psh'
+      lib/http.l
+
+03feb21
+   Load @lib/sq.l in 'psh'
+      lib/http.l
+
+02feb21
+   Optional insert string in config keys
+      src/httpGate.c
+      doc/httpGate.html
+
+01feb21
+   Typo ".pil" -> "./pil"
+      doc/httpGate.html
+
+28jan21
+   Typo "none" -> "nond"
+      doc/tut.html
+
+25jan21
+   Remove 'evCmd' from custom function keys
+      lib/vip.l
+
+23jan21
+   'fish' function "skip" return value
+      src/apply.l
+      doc/refF.html
+      lib/vip.l
+
+22jan21
+   em80, em90 and em100 styles
+      lib.css
+
+21jan21
+   Stack check in 'fish'
+      src/apply.l
+
+20jan21
+   Comment
+      lib/tinymce.l
+
+18jan21
+   Bug in 'pack' of external symbol names
+      src/sym.l
+
+17jan21
+   'pil' backport
+      lib/compat.l
+
+15jan21
+   Micro-templates
+      lib/xhtml.l
+      lib/xhtml/
+   Bug in 'pass'
+      src/apply.l
+   Call 'bufString' instead of 'pathString' in 'token'
+      src/io.l
+
+14jan21
+   Bug in 'bit?'
+      src/big.l
+
+08jan21
+   Minor cosmetics
+      src/subr.l
+   Improved terminal reset
+      src/lib.c
+
+05jan21
+   Debian release
+
+Dec20
+   Pil21 initial version
+
+####### 21.0 #######

@@ -1,0 +1,29 @@
+#!/usr/bin/picolisp /usr/lib/picolisp/lib.l
+# 19feb22abu
+
+(unless *Dbg
+   (load "@lib/vip.l") )
+
+(stack 1024)
+
+(de vip~*Ns pico)
+
+(bye
+   (if
+      (vip~vi  ## [+<pat> | +[<num>]] <file1>  [+[<num>]] <file2> ..
+         (make
+            (while (opt)
+               (let S @
+                  (cond
+                     ((pre? "+" S)
+                        (link
+                           (cons
+                              (cond
+                                 ((= "+" S) T)
+                                 ((format S) @)
+                                 (T (cdr (chop S))) )
+                              (opt) ) ) )
+                     ((pre? "-" S) (load S))
+                     (T (link S)) ) ) ) ) )
+      0
+      1 ) )
