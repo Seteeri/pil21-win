@@ -102,68 +102,13 @@ char *getDir(char *nm) {
 }
 
 // Readline
-#include <readline/readline.h>
-#include <readline/history.h>
 
-static char *tabEntry(const char *text, int stat) {
-   extern char *tabComplete(const char*);
-
-   rl_completion_append_character = '\0';
-   return tabComplete(stat? NULL : text);
-}
-
-void initReadline(void) {
-   extern int rlGetc(FILE*);
-   extern int rlAvail(void);
-
-   rl_catch_signals = 0;
-   rl_getc_function = rlGetc;
-   rl_input_available_hook = rlAvail;
-   rl_completion_entry_function = tabEntry;
-   rl_special_prefixes = "$%&*+-<=>?@";
-   rl_basic_quote_characters = NULL;
-}
-
-char *gReadline(const char *prompt) {
-   int e = errno;
-   char *p = readline(prompt);
-
-   errno = e;
-   return p;
-}
-
-void rlHide(void) {
-   if (rl_readline_state & RL_STATE_INITIALIZED  &&  !(rl_readline_state & RL_STATE_DONE)) {
-      rl_clear_visible_line();
-      fflush(stdout);
-   }
-}
-
-void rlShow(void) {
-   if (rl_readline_state & RL_STATE_INITIALIZED  &&  !(rl_readline_state & RL_STATE_DONE))
-      rl_forced_update_display();
-}
-
-void rlSigBeg(void) {
-   if (rl_readline_state & RL_STATE_INITIALIZED) {
-      rl_save_prompt();
-      rl_free_line_state();
-      rl_cleanup_after_signal();
-   }
-}
-
-void rlSigEnd(void) {
-   if (rl_readline_state & RL_STATE_SIGHANDLER) {
-      rl_reset_after_signal();
-      rl_restore_prompt();
-   }
-}
-
-char *currentLine(void) {
-   HIST_ENTRY *h;
-
-   return (h = history_get(history_length))? h->line : NULL;
-}
+char *gReadline(const char *prompt) { return NULL; }
+void rlHide(void) { }
+void rlShow(void) { }
+void rlSigBeg(void) { }
+void rlSigEnd(void) { }
+char *currentLine(void) { return NULL; }
 
 // Signals
 const int32_t Sig[] = {

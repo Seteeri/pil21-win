@@ -1740,29 +1740,6 @@ nameErr atomErr pairErr lstErr varErr itemErr protErr lockErr forkErr symNspErr)
                (val Z)
                (set Z (eval (car X))) ) ) ) ) )
 
-# (history ['lst]) -> lst
-(de _history (Exe)
-   (let X (cdr Exe)
-      (if (atom X)
-         (let P (history_list)
-            (if (and P (val P))
-               (let
-                  (Y (cons (mkStr (val (val P))) $Nil)
-                     R (save Y)
-                     I 0 )
-                  (while (val (ofs P (inc 'I)))
-                     (setq Y
-                        (set 2 Y (cons (mkStr (val @)) $Nil)) ) )
-                  R )
-               $Nil ) )
-         (let (Y (needLst Exe (eval (car X)))  Z Y)
-            (clear_history)
-            (while (pair Z)
-               (let (Nm (xName Exe (xSym (++ Z)))  Stk (stack))
-                  (add_history (bufString Nm (b8 (bufSize Nm))) )
-                  (stack Stk) ) )
-            Y ) ) ) )
-
 # (version ['flg]) -> lst
 (de _version (Exe)
    (when (nil? (eval (cadr Exe)))
@@ -1847,7 +1824,6 @@ nameErr atomErr pairErr lstErr varErr itemErr protErr lockErr forkErr symNspErr)
    (signal (val SIGPIPE Sig) (val SigIgn))
    (signal (val SIGTTIN Sig) (val SigIgn))
    (signal (val SIGTTOU Sig) (val SigIgn))
-   (initReadline)
    (set $USec (getUsec YES))
    (unless (setjmp QuitRst)
       (loadAll 0) )  # Load arguments

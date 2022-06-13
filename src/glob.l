@@ -546,7 +546,7 @@
    (NIL "adr" _adr)
    (NIL "trail" _trail)
    (NIL "up" _up)
-   (NIL "history" _history)
+   #(NIL "history" _history)
    ($LastSym "version" _version) )
 
 # GC relevant data

@@ -1197,16 +1197,7 @@ selectErr)
                         (when (or (val $Bind) (== (val $LinePrmt) (val $ContPrmt)))
                            (err 0 0 $Empty null) )  # quit
                         (bye 0) )
-                     (set $LinePrmt (val $ContPrmt))
-                     (unless
-                        (or
-                           (=0 (val P))
-                           (== @ 32)
-                           (and
-                              (== @ (char "."))
-                              (=0 (val (inc P))) )
-                           (and (currentLine) (=0 (strcmp @ P))) )
-                        (add_history P) ) )
+                     (set $LinePrmt (val $ContPrmt)) )
                   (nond
                      ((val P)
                         (set $LinePtr null)

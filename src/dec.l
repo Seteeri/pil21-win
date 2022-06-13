@@ -169,11 +169,10 @@ dlerror dup dup2 close signal poll waitpid setjmp longjmp kill exit)
 (de T NIL exit (i32))
 
 # libreadline
-(local) (add_history history_list clear_history)
-
-(de T void add_history (i8*))
-(de T i8*** history_list ())
-(de T void clear_history ())
+#(local) (add_history history_list clear_history)
+#(de T void add_history (i8*))
+#(de T i8*** history_list ())
+#(de T void clear_history ())
 
 # Glue lib.c
 (local) (TgOS TgCPU PipeBufSize)

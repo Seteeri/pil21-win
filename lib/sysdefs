@@ -1,0 +1,46 @@
+# Clang 11.0.0 (https://github.com/msys2/MSYS2-packages ca391a3660d17cdee1e94d5afd2e72a4f750cddb)
+# MSYS_NT-10.0-19044
+# x86_64
+
+[errno]
+EINTR	4
+EAGAIN	11
+EACCES	13
+
+[stdio]
+BUFSIZ	1024
+
+[unistd]
+PIPE_BUF	4096
+PATH_MAX	4096
+
+[terminal]
+TIOCGWINSZ	21505
+TIOCSWINSZ	21506
+winsize	8
+ws_row	0
+ws_col	2
+
+[networking]
+SOCK_STREAM	1
+SOCK_DGRAM	2
+AF_INET6	23
+SOL_SOCKET	65535
+SO_REUSEADDR	4
+IPPROTO_IPV6	41
+IPV6_V6ONLY	27
+INET6_ADDRSTRLEN	46
+sockaddr_in6	28
+sin6_family	0
+sin6_addr	8
+sin6_port	2
+NI_MAXHOST	1025
+NI_NAMEREQD	4
+addrinfo	48
+ai_family	4
+ai_socktype	8
+socklen_t	4
+ai_addrlen	16
+ai_addr	32
+ai_next	40
+AF_UNSPEC	0
